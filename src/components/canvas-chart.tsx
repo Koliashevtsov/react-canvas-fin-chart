@@ -1,12 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
 import Chart from 'canvas-fin-chart';
-import { Data, InputOptions } from 'canvas-fin-chart/dist/types';
 
-interface CanvasChartProps  {
-    data: Data;
-    options: InputOptions;
-}
+import { CanvasChartProps } from '../types';
 
 const CanvasChart: React.FC<CanvasChartProps> = (props) => {
     const { data, options } = props;
