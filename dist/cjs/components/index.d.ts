@@ -1,1 +1,2 @@
-export * from './canvas-chart';
+import CanvasChart from './canvas-chart';
+export default CanvasChart;

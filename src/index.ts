@@ -1,1 +1,3 @@
-export * from './components';
+import CanvasChart from './components';
+
+export { CanvasChart };
