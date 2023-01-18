@@ -5,7 +5,7 @@ import Chart from 'canvas-fin-chart';
 import { CanvasChartProps } from '../types';
 
 const CanvasChart: React.FC<CanvasChartProps> = (props) => {
-    const { data, options } = props;
+    const { data, options, width, height } = props;
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const CanvasChart: React.FC<CanvasChartProps> = (props) => {
     })
 
     return (
-        <canvas ref={canvasRef}>
+        <canvas ref={canvasRef} width={width} height={height}>
 
         </canvas>
     )
