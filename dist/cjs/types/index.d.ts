@@ -3,4 +3,4 @@ interface CanvasChartProps {
     data: Data;
     options?: InputOptions;
 }
-export { CanvasChartProps };
+export { CanvasChartProps, Data, InputOptions };
