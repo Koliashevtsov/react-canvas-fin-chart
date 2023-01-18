@@ -6,5 +6,7 @@ interface CanvasChartProps  {
 }
 
 export {
-    CanvasChartProps
+    CanvasChartProps,
+    Data,
+    InputOptions
 }
