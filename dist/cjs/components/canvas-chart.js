@@ -29,7 +29,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const canvas_fin_chart_1 = __importDefault(require("canvas-fin-chart"));
 const CanvasChart = (props) => {
-    const { data, options } = props;
+    const { data, options, width, height } = props;
     const canvasRef = (0, react_1.useRef)(null);
     (0, react_1.useEffect)(() => {
         if (!canvasRef.current)
@@ -41,7 +41,7 @@ const CanvasChart = (props) => {
             options
         });
     });
-    return (react_1.default.createElement("canvas", { ref: canvasRef }));
+    return (react_1.default.createElement("canvas", { ref: canvasRef, width: width, height: height }));
 };
 exports.default = CanvasChart;
 //# sourceMappingURL=canvas-chart.js.map
