@@ -7,7 +7,7 @@ interface CanvasChartProps  {
     height?: number;
 }
 
-export {
+export type {
     CanvasChartProps,
     Data,
     InputOptions

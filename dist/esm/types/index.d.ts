@@ -5,4 +5,4 @@ interface CanvasChartProps {
     width?: number;
     height?: number;
 }
-export { CanvasChartProps, Data, InputOptions };
+export type { CanvasChartProps, Data, InputOptions };

@@ -29,6 +29,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "canvas-fin-chart": "^1.0.0"
+    "canvas-fin-chart": "^1.0.1"
   }
 }
