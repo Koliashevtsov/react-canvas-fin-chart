@@ -33,14 +33,17 @@ const CanvasChart = (props) => {
     const canvasRef = (0, react_1.useRef)(null);
     (0, react_1.useEffect)(() => {
         if (!canvasRef.current)
-            throw Error("canvasRef is not assigned");
+            throw Error('canvasRef is not assigned');
         const context = canvasRef.current.getContext('2d');
         const chart = new canvas_fin_chart_1.default({ context });
         chart.init({
             data,
             options
         });
-    });
+        return () => {
+            chart.destroy();
+        };
+    }, [data, options]);
     return (react_1.default.createElement("canvas", { ref: canvasRef, width: width, height: height }));
 };
 exports.default = CanvasChart;
