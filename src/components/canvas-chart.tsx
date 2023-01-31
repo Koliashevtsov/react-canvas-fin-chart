@@ -9,16 +9,20 @@ const CanvasChart: React.FC<CanvasChartProps> = (props) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        if (!canvasRef.current) throw Error("canvasRef is not assigned");
-
+        if (!canvasRef.current) throw Error('canvasRef is not assigned');
+        
         const context = canvasRef.current.getContext('2d') as CanvasRenderingContext2D;
         const chart = new Chart({context});
-
+        
         chart.init({
             data,
             options
         })
-    })
+
+        return () => {
+            chart.destroy()
+        }
+    }, [data, options])
 
     return (
         <canvas ref={canvasRef} width={width} height={height}>
