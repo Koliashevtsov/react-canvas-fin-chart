@@ -1,4 +1,4 @@
-import { Data, InputOptions } from 'canvas-fin-chart/dist/types';
+import { Data, InputOptions, Dataset } from 'canvas-fin-chart/dist/types';
 
 interface CanvasChartProps  {
     data: Data;
@@ -10,5 +10,6 @@ interface CanvasChartProps  {
 export type {
     CanvasChartProps,
     Data,
+    Dataset,
     InputOptions
 }
