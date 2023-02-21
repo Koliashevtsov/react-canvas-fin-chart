@@ -1,3 +1,3 @@
 import CanvasChart from './components';
-import { CanvasChartProps, Data, Dataset, InputOptions } from './types';
-export { CanvasChart, CanvasChartProps, Data, Dataset, InputOptions };
+import { CanvasChartProps, Data, Dataset, InputOptions, ExtendedDataset } from './types';
+export { CanvasChart, CanvasChartProps, Data, Dataset, ExtendedDataset, InputOptions };
