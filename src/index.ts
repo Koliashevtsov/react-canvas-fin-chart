@@ -6,5 +6,6 @@ export {
     CanvasChartProps,
     Data,
     Dataset,
+    ExtendedDataset,
     InputOptions 
 };
