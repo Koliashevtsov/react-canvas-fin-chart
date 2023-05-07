@@ -28,6 +28,7 @@ const data: Data = {
 interface CanvasChartProps  {
     data: Data;
     options?: InputOptions;
+    plugins?: InputPlugin[];
     width?: number;
     height?: number;
 }
@@ -110,6 +111,23 @@ const updatedOptions = {
 }
 
 <CanvasChart data={data} options={updateOptions}/>
+```
+## Plugins
+
+There are two plugins in current version you can use (horizontal-scrolling and date-time-labels).
+
+```sh
+
+const plugins = [
+        {id: 'horizontal-scrolling', prop: {scrolling: 100}},
+        {id: 'date-time-labels', prop: {
+            startDate: '2023-01-12T18:50:28',
+            finishDate: '2023-12-12T18:50:28',
+            step: '1M'
+        }}
+]
+
+<CanvasChart data={data} plugins={plugins}/>
 ```
 
 ## License
