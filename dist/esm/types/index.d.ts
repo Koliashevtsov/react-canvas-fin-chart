@@ -1,8 +1,9 @@
-import { Data, InputOptions, Dataset, ExtendedDataset } from 'canvas-fin-chart/dist/esm/types';
+import { Data, InputOptions, Dataset, ExtendedDataset, InputPlugin } from 'canvas-fin-chart/dist/esm/types';
 interface CanvasChartProps {
     data: Data;
     options?: InputOptions;
+    plugins?: InputPlugin[];
     width?: number;
     height?: number;
 }
-export type { CanvasChartProps, Data, Dataset, ExtendedDataset, InputOptions };
+export type { CanvasChartProps, Data, Dataset, ExtendedDataset, InputOptions, InputPlugin };

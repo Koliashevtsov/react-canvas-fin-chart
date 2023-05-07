@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'canvas-fin-chart';
 const CanvasChart = (props) => {
-    const { data, options, width, height } = props;
+    const { data, options, plugins, width, height } = props;
     const canvasRef = useRef(null);
     useEffect(() => {
         if (!canvasRef.current)
@@ -10,12 +10,13 @@ const CanvasChart = (props) => {
         const chart = new Chart({ context });
         chart.init({
             data,
-            options
+            options,
+            plugins
         });
         return () => {
             chart.destroy();
         };
-    }, [data, options]);
+    }, [data, options, plugins]);
     return (React.createElement("canvas", { ref: canvasRef, width: width, height: height }));
 };
 export default CanvasChart;
