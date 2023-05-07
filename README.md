@@ -67,7 +67,6 @@ It is default options which used in chart config.
 You can change it in options property
 ```sh
 const defaultChartOptions: DefOptions = {
-    horizontalScrolling: false,
     styles: {
         chart: {
             backgroundColor: Color.White,
